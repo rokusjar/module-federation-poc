@@ -63,6 +63,25 @@
         }
       }
     },
+    "serve-without-remotes": {
+      "executor": "@nrwl/react:module-federation-dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "shell:build",
+        "hmr": true,
+        "port": 4200,
+        "skipRemotes": ["alpha", "beta", "widget"]
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "shell:build:development"
+        },
+        "production": {
+          "buildTarget": "shell:build:production",
+          "hmr": false
+        }
+      }
+    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],

@@ -1,1 +1,16 @@
 /* Your styles goes here. */
+
+.Wrapper {
+  color: #ffffff;
+}
+
+.Navigation {
+  padding: 32px 16px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.Navigation a:hover {
+  filter: brightness(50%);
+}
